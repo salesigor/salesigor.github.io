@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larão</title>
+    <title>Huious</title>
     <link rel="icon" href="/images/loveletter.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="/images/loveletter.ico" type="image/x-icon"/>
     <style>
         body {
             font: normal 15pt Arial;
-            background-color: rgb(215, 189, 240);
+            background-color: #d7bdf0;
             color: rgb(65, 55, 3);
         }
         div {
             text-align: center;
             width: 400px;
             height: 400px;
-            background:  rgb(140, 64, 211);
+            background: 'orange';
             display: table;
         }
 
@@ -26,32 +26,49 @@
             display: table-cell;
         }
         h1{
-            color: rgb(255, 234, 114);
+            color:black;
         }
-        input{
+        input#botao1{
             font: bold 18pt Arial;
-            background-color: rgb(255, 234, 114);
+            background-color: rgb(228, 175, 61);
+            color: rgb(5, 0, 0);
+        }
+        input#botao2{
+            font: bold 12pt Arial;
+            background-color: rgb(228, 175, 61);
+            color: rgb(5, 0, 0);
+        }
+        input#music{
+            font: bold 12pt Arial;
             color: rgb(5, 0, 0);
         }
     </style>
 </head>
 <body>
-    <div>
+    <div id="area" onmouseenter="mouseEnter()" onmouseout="mouseOut()">
         <h1>Olá, amar!</h1>
-        <input type="button" value="AMAR ❤️" onclick="window.open('https://wa.me/5511964689999')">
-        <input type="button" value="Rota 🚌" onclick="window.open('https://goo.gl/maps/fyQpYb3q6GqKhQEE8')">
+        <input id="botao1" type="button" value="Hablar com Igod" onclick="window.open('https://wa.me/5511964689999')">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VhbwAmDZmWOT2Os51QbZO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <input type="text" name="" id="music">
+        <input id="botao2" type="button" value="Escolha a próxima" onclick="falar('input#music')">
     </div>
     <script>
-
+        var a = window.document.getElementById('area')
+        function mouseEnter(id) {
+            a.style.background = 'green';
+        }
+        function mouseOut(id) {
+            a.style.background = 'orange';
+        }
         function falar() {
-            var name = window.prompt(`Fale algo`)
+            var text = window.document.getElementById(music)
             var request = new XMLHttpRequest();
             request.open("POST","https://discord.com/api/webhooks/1138526415780859914/-ZITFycToX5rqXRSDfaYmdTKsls1m2yFGJsSiSLexmLOif8Z8ai1Uqji-9y0PNWVqbmj");
             request.setRequestHeader('Content-type', 'application/json');
             var params = {
                 avatar_url: 'https://cdn.discordapp.com/attachments/994023707121037325/1138177920645464075/image.png',
-                username: 'ALEX RINE',
-                content: `${name}`
+                username: 'MUSICA ANDERSON',
+                content: text
             };
             request.send(JSON.stringify(params));
         };
