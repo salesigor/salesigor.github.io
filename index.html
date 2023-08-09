@@ -49,8 +49,8 @@
         <h1>Morning, Floating Masters!</h1>
         <input id="botao1" type="button" value="Talk to Igod" onclick="window.open('https://wa.me/5511964689999')">
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VhbwAmDZmWOT2Os51QbZO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <input type="text" name="" id="music">
-        <input id="botao2" type="button" value="Send next" onclick="falar('input#music')">
+        <input type="text" name="musiquinha" id="music">
+        <input id="botao2" type="button" value="Send next" onclick="falar()">
     </div>
     <script>
         var a = window.document.getElementById('area')
@@ -61,14 +61,14 @@
             a.style.background = 'orange';
         }
         function falar() {
-            var text = window.document.getElementById(music)
+            var text = window.document.getElementById("music").value
             var request = new XMLHttpRequest();
             request.open("POST","https://discord.com/api/webhooks/1138526415780859914/-ZITFycToX5rqXRSDfaYmdTKsls1m2yFGJsSiSLexmLOif8Z8ai1Uqji-9y0PNWVqbmj");
             request.setRequestHeader('Content-type', 'application/json');
             var params = {
                 avatar_url: 'https://cdn.discordapp.com/attachments/994023707121037325/1138177920645464075/image.png',
                 username: 'MUSICA ANDERSON',
-                content: text
+                content: `=play ${text}`
             };
             request.send(JSON.stringify(params));
         };
