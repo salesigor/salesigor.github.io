@@ -1,0 +1,35 @@
+body {
+    font: normal 15pt Arial;
+    background-image: linear-gradient(to left, rgb(212, 245, 253), rgb(163, 237, 255));
+    color: rgb(65, 55, 3);
+}
+div#area {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 3%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.356);
+    background-image: linear-gradient(to bottom, rgb(64, 138, 199), rgb(1, 93, 168));
+    display: table;
+    padding: 20px;
+    margin: auto;
+}
+h1{
+    color:white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.548);
+}
+input#botao1{
+    font-size: 100%;
+    background-color: rgb(255, 220, 63);
+    color: black;
+}
+input#botao2{
+    font-size: 90%;
+    background-color: rgb(255, 220, 63);
+    color: black;
+}
+input#music{
+    font-size: 90%;
+    color: black;
+}

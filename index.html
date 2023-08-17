@@ -6,60 +6,17 @@
     <title>Elliot</title>
     <link rel="icon" href="/images/rage.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="/images/rage.ico" type="image/x-icon"/>
-    <style>
-        body {
-            font: normal 15pt Arial;
-            background-color: #f5dfb1;
-            color: rgb(65, 55, 3);
-        }
-        div {
-            text-align: center;
-            width: 400px;
-            height: 400px;
-            background: 'orange';
-            display: table;
-        }
-
-        #interna {
-            text-align: center;
-            vertical-align: middle;
-            display: table-cell;
-        }
-        h1{
-            color:black;
-        }
-        input#botao1{
-            font: bold 18pt Arial;
-            background-color: rgb(228, 175, 61);
-            color: rgb(5, 0, 0);
-        }
-        input#botao2{
-            font: bold 12pt Arial;
-            background-color: rgb(228, 175, 61);
-            color: rgb(5, 0, 0);
-        }
-        input#music{
-            font: bold 12pt Arial;
-            color: rgb(5, 0, 0);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="area" onmouseenter="mouseEnter()" onmouseout="mouseOut()">
+    <div id="area">
         <h1>Morning, Floating Masters!</h1>
         <input id="botao1" type="button" value="Talk to Igod" onclick="window.open('https://wa.me/5511964689999')">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VhbwAmDZmWOT2Os51QbZO?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VhbwAmDZmWOT2Os51QbZO?utm_source=generator" width="100%" height="360" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <input type="text" name="musiquinha" id="music">
         <input id="botao2" type="button" value="Send next" onclick="falar()">
     </div>
     <script>
-        var a = window.document.getElementById('area')
-        function mouseEnter(id) {
-            a.style.background = 'green';
-        }
-        function mouseOut(id) {
-            a.style.background = 'orange';
-        }
         function falar() {
             var text = window.document.getElementById("music").value
             var request = new XMLHttpRequest();
