@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elliot</title>
+    <title>Estudos do Igão</title>
     <link rel="icon" href="/images/rage.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="/images/rage.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="area">
-        <h1>Morning, Floating Masters!</h1>
-        <input id="botao1" type="button" value="Talk to Igod" onclick="window.open('https://wa.me/5511964689999')">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VhbwAmDZmWOT2Os51QbZO?utm_source=generator" width="100%" height="360" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <input type="text" name="musiquinha" id="music">
-        <input id="botao2" type="button" value="Send next" onclick="falar()">
+        <h1>HTML5 e CSS3</h1>
+        <p>⬇ Eu to por aqui ⬇</p>
+        <div id="whats" onclick="window.open('https://wa.me/5511964689999')">
+            <h2 id="whatsname">WhatsApp</h2>
+        </div>
+        <div id="insta" onclick="window.open('https://www.instagram.com/eusouigu/')">
+            <h2 id="whatsname">Instagram</h2>
+        </div>
     </div>
-    <script>
-        function falar() {
-            var text = window.document.getElementById("music").value
-            var request = new XMLHttpRequest();
-            request.open("POST","https://discord.com/api/webhooks/1138526415780859914/-ZITFycToX5rqXRSDfaYmdTKsls1m2yFGJsSiSLexmLOif8Z8ai1Uqji-9y0PNWVqbmj");
-            request.setRequestHeader('Content-type', 'application/json');
-            var params = {
-                avatar_url: 'https://cdn.discordapp.com/attachments/994023707121037325/1138177920645464075/image.png',
-                username: 'MUSICA ANDERSON',
-                content: `=play ${text}`
-            };
-            request.send(JSON.stringify(params));
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

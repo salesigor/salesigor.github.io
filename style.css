@@ -15,9 +15,34 @@ div#area {
     padding: 20px;
     margin: auto;
 }
+div#whats{
+    margin: auto;
+    background-color: rgb(27, 196, 78);
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border: 10px;
+    width: 180px;
+    border-radius: 4%;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+}
+div#insta{
+    margin: auto;background-image: linear-gradient(to left, purple, rgb(199, 136, 0));
+    color: whitesmoke;
+    border-color: whitesmoke;
+    border: 10px;
+    width: 180px;
+    border-radius: 4%;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+}
+h2#whatsname{
+    font-size: 130%;
+}
 h1{
     color:white;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.548);
+}
+p {
+    color: white;
 }
 input#botao1{
     font-size: 100%;
