@@ -3,7 +3,7 @@ body {
     background-image: linear-gradient(to left, rgb(212, 245, 253), rgb(163, 237, 255));
     color: rgb(65, 55, 3);
 }
-div#area {
+#area {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     width: 400px;
@@ -19,17 +19,34 @@ div#area {
     margin: auto;
     display: flex; /* Utilizamos flexbox para alinhar as divs lado a lado */
 }
-div#whats {
+#whats {
+    display: flex; /* Alinhar elementos lado a lado */
+    align-items: center; /* Centralizar verticalmente os elementos */
+    gap: 2px; /* Espaçamento entre o ícone e o texto */
+    cursor: pointer; /* Mostrar cursor de mão para indicar interatividade */
+    padding: 10px; /* Adicionar algum espaço interno para melhorar a aparência */
     background-color: rgb(27, 196, 78);
     color: whitesmoke;
     border-color: whitesmoke;
     border: 10px;
+    width: fit-content; /* Largura ajustada ao conteúdo */
+    border-radius: 4%;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+    border: 10px;
     width: 180px;
     border-radius: 5%;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
     margin-right: 10px; /* Espaçamento entre as divs */
 }
-div#insta {
+#whats:hover {
+    background-color: rgb(20, 150, 60); /* Cor mais escura no hover */
+}
+#insta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
     background-image: linear-gradient(to left, purple, rgb(199, 136, 0));
     color: whitesmoke;
     border-color: whitesmoke;
@@ -37,8 +54,12 @@ div#insta {
     width: 180px;
     border-radius: 5%;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+    transition: background-image 0.3s; /* Adiciona uma transição suave */
 }
-h2#whatsname{
+#insta:hover {
+    background-image: linear-gradient(to left, darkpurple, darkorange); /* Cores mais escuras no hover */
+}
+#whatsname{
     font-size: 130%;
 }
 h1{
@@ -48,17 +69,17 @@ h1{
 p {
     color: white;
 }
-input#botao1{
+#botao1{
     font-size: 100%;
     background-color: rgb(255, 220, 63);
     color: black;
 }
-input#botao2{
+#botao2{
     font-size: 90%;
     background-color: rgb(255, 220, 63);
     color: black;
 }
-input#music{
+#music{
     font-size: 90%;
     color: black;
 }
