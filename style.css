@@ -61,6 +61,25 @@ body {
 #insta:hover {
     background-image: linear-gradient(to left, darkpurple, darkorange); /* Cores mais escuras no hover */
 }
+#gift {
+    margin: auto;
+    margin-top: 10px;
+    gap: 2px; /* Espaçamento entre o ícone e o texto */
+    cursor: pointer; /* Mostrar cursor de mão para indicar interatividade */
+    padding: 10px; /* Adicionar algum espaço interno para melhorar a aparência */
+    background-color: rgb(255, 174, 0);
+    border: 10px;
+    width: fit-content; /* Largura ajustada ao conteúdo */
+    border-radius: 4%;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+    border: 10px;
+    width: 180px;
+    border-radius: 5%;
+}
+#gift:hover {
+    background-color: rgb(214, 146, 0); /* Cor mais escura no hover */
+}
 #whatsname{
     font-size: 130%;
 }
@@ -82,7 +101,30 @@ p {
     background-color: rgb(255, 220, 63);
     color: black;
 }
-#music{
-    font-size: 90%;
-    color: black;
+.popup {
+    display: inline-block;
+    width: 50%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom, rgb(255, 229, 173), rgb(255, 212, 72));
+    padding: 10px;
+    border-radius: 5%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+#gift {
+    cursor: pointer;
+}
+.popup img {
+    max-width: 30%;
+    height: auto;
+}
+#closePopupButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
