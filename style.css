@@ -15,23 +15,27 @@ div#area {
     padding: 20px;
     margin: auto;
 }
-div#whats{
+#botoes {
     margin: auto;
+    display: flex; /* Utilizamos flexbox para alinhar as divs lado a lado */
+}
+div#whats {
     background-color: rgb(27, 196, 78);
     color: whitesmoke;
     border-color: whitesmoke;
     border: 10px;
     width: 180px;
-    border-radius: 4%;
+    border-radius: 5%;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
+    margin-right: 10px; /* Espaçamento entre as divs */
 }
-div#insta{
-    margin: auto;background-image: linear-gradient(to left, purple, rgb(199, 136, 0));
+div#insta {
+    background-image: linear-gradient(to left, purple, rgb(199, 136, 0));
     color: whitesmoke;
     border-color: whitesmoke;
     border: 10px;
     width: 180px;
-    border-radius: 4%;
+    border-radius: 5%;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.356);
 }
 h2#whatsname{
